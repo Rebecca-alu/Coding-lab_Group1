@@ -23,7 +23,7 @@ initialize_system() {
         echo "  [EXISTS] archived_logs already exists. Skipping."
     fi
  
-    # Check and create reports directory
+    
     if [ ! -d "reports" ]; then
         echo "Creating reports directory..."
         mkdir -p reports
@@ -32,7 +32,7 @@ initialize_system() {
         echo "  [EXISTS] reports already exists. Skipping."
     fi
  
-    # Create placeholder log files so the Python engine can write to them
+   
     touch active_logs/heart_rate.log
     touch active_logs/temperature.log
     touch active_logs/water_usage.log
@@ -40,6 +40,27 @@ initialize_system() {
     echo "  [OK] Log files initialized in active_logs/."
 }
 
+
+
+secure_data() {
+    echo ""
+    echo "============================================="
+    echo "  KNH Security Configuration"
+    echo "============================================"
+
+   
+    echo "Applying permissions: owner read+write only on active_logs/..."
+    chmod 600 active_logs/*.log     
+    chmod 700 active_logs          
+
+    echo ""
+    echo "Current permissions on active_logs/:"
+    ls -l active_logs/
+    echo ""
+    echo "Explanation of permissions:"
+    echo "  drwx------ on directory = only owner can read/write/enter"
+    echo "  -rw------- on files    = only owner can read and write"
+}
 
 echo "Welcome to KNH admin system"
 echo ""
