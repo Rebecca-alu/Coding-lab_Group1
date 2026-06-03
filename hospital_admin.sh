@@ -23,7 +23,7 @@ initialize_system() {
         echo "  [EXISTS] archived_logs already exists. Skipping."
     fi
  
-    # Check and create reports directory
+    
     if [ ! -d "reports" ]; then
         echo "Creating reports directory..."
         mkdir -p reports
@@ -32,7 +32,7 @@ initialize_system() {
         echo "  [EXISTS] reports already exists. Skipping."
     fi
  
-    # Create placeholder log files so the Python engine can write to them
+   
     touch active_logs/heart_rate.log
     touch active_logs/temperature.log
     touch active_logs/water_usage.log
