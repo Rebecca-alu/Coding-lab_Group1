@@ -2,7 +2,7 @@
 
 process_vitals() {
 
-   	echo "Analyzing critical vitals........"
+   	echo "Analyzing critical vitals...."
     	> reports/critical_alerts.txt
 
 	for file in heart_rate_log temperature_log; do
