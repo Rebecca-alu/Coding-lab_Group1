@@ -1,12 +1,24 @@
 #!/bin/bash
 
 TIMESTAMP=$(date +%Y%m%d_%H%M)
+echo "Timestamp generated: ${TIMESTAMP}"
 
-mv active_logs/heart_rate.log archived_logs/heart_rate_${TIMESTAMP}.log
-mv active_logs/temperature.log archived_logs/temperature_${TIMESTAMP}.log
-mv active_logs/water_usage.log archived_logs/water_usage_${TIMESTAMP}.log
-touch active_logs/heart_rate.log 
-touch active_logs/temperature.log
-touch active_logs/water_usage.log
 
-echo "Logs archived successfully at ${TIMESTAMP}"
+echo " Checking directories..."
+if [ ! -d "active_logs" ]; then
+    echo "Active_logs directory is missing"
+    return 1
+fi
+
+for file in heart_rate temperature water_usage; do
+    echo "Archiving ${file}_log.log..."
+    
+    mv "active_logs/${file}_log.log" "archived_logs/${file}_${TIMESTAMP}.log"
+    
+    echo "recreating ${file}.log"
+    touch "active_logs/${file}_log.log"
+    echo "Recreated: active_logs/${file}.log"
+done
+
+echo ""
+echo "Logs archived successfully at ${TIMESTAMP}"
