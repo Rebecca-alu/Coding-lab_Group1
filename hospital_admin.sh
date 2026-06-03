@@ -41,9 +41,7 @@ initialize_system() {
 }
 
 secure_data(){
-# MEMBER 2 - The Security Lead: secure_data()
-# Applies strict permissions to active_logs (owner read/write only)
-# ─────────────────────────────────────────────────────────────
+
 secure_data() {
     echo ""
     echo "============================================"
