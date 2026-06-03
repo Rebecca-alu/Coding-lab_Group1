@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+
 initialize_system() {
     echo "============================================"
     echo "  KNH System Initialization"
@@ -38,4 +38,29 @@ initialize_system() {
     touch active_logs/water_usage.log
     echo ""
     echo "  [OK] Log files initialized in active_logs/."
+}
+
+secure_data(){
+# MEMBER 2 - The Security Lead: secure_data()
+# Applies strict permissions to active_logs (owner read/write only)
+# ─────────────────────────────────────────────────────────────
+secure_data() {
+    echo ""
+    echo "============================================"
+    echo "  KNH Security Configuration"
+    echo "============================================"
+
+    # chmod 600 = owner read+write only (rw-------)
+    # This prevents other users or groups from reading sensitive medical logs
+    echo "Applying permissions: owner read+write only on active_logs/..."
+    chmod 600 active_logs/*.log     # Lock down individual log files
+    chmod 700 active_logs           # Owner can enter directory; others cannot
+
+    echo ""
+    echo "Current permissions on active_logs/:"
+    ls -l active_logs/
+    echo ""
+    echo "Explanation of permissions:"
+    echo "  drwx------ on directory = only owner can read/write/enter"
+    echo "  -rw------- on files    = only owner can read and write"
 }
