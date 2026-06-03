@@ -33,11 +33,8 @@ initialize_system() {
     fi
  
    
-    touch active_logs/heart_rate.log
-    touch active_logs/temperature.log
-    touch active_logs/water_usage.log
     echo ""
-    echo "  [OK] Log files initialized in active_logs/."
+    echo "  [OK] project initialized successfully..."
 }
 
 
