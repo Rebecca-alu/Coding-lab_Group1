@@ -39,3 +39,17 @@ initialize_system() {
     echo ""
     echo "  [OK] Log files initialized in active_logs/."
 }
+
+# Step 1: Initialize the directory structure
+initialize_system
+
+# Step 2: Lock down permissions
+secure_data
+
+# Final status message with current date
+echo ""
+echo "============================================"
+echo "  System Environment Secured"
+echo "  Date: $(date)"
+echo "============================================"
+
