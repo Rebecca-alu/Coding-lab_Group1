@@ -45,7 +45,7 @@ initialize_system() {
 secure_data() {
     echo ""
     echo "============================================="
-    echo "  KNH Security Configuration"
+    echo "  KNH Security Configuration."
     echo "============================================"
 
    
