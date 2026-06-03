@@ -66,10 +66,9 @@ echo "Welcome to KNH admin system"
 echo ""
 echo "What do you want to do: "
 echo""
-echo "1) Initiliaze the system."
-echo "2) Secure the hospital data."
+echo "1) Initiliaze the system"
+echo "2) Secure the hospital data"
 read option
-
 
 if (( option == 1 )); then
     initialize_system
