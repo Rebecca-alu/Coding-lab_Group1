@@ -40,7 +40,7 @@ initialize_system() {
     echo "  [OK] Log files initialized in active_logs/."
 }
 
-secure_data(){
+
 
 secure_data() {
     echo ""
@@ -48,11 +48,10 @@ secure_data() {
     echo "  KNH Security Configuration"
     echo "============================================"
 
-    # chmod 600 = owner read+write only (rw-------)
-    # This prevents other users or groups from reading sensitive medical logs
+   
     echo "Applying permissions: owner read+write only on active_logs/..."
-    chmod 600 active_logs/*.log     # Lock down individual log files
-    chmod 700 active_logs           # Owner can enter directory; others cannot
+    chmod 600 active_logs/*.log     
+    chmod 700 active_logs          
 
     echo ""
     echo "Current permissions on active_logs/:"
