@@ -53,7 +53,7 @@ water_audit() {
     printf "%-20s : %d\n" "Records Analysed" "$total_records"
     printf "%-20s : %.2f Litres\n" "Average Usage" "$average"
     printf "%-20s : %s\n" "Generated" "$(date)"
-    printf "===============================================\n"
+    printf "==========================================\n"
 }
 
 
