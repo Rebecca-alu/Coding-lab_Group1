@@ -50,3 +50,5 @@ for file in heart_rate temperature water_usage; do
     touch active_logs/${file}.log
     echo "Recreated: active_logs/${file}.log"
 done
+
+echo "Logs archived successfully at ${TIMESTAMP}"
