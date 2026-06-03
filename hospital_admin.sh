@@ -1,12 +1,7 @@
 #!/bin/bash
  # hospital_admin.sh
 # KNH Digital Infrastructure - Environment Setup & Security
-# Members: 1 (Architect), 2 (Security Lead), 3 (Orchestrator)
- 
-# ─────────────────────────────────────────────────────────────
-# MEMBER 1 - The Architect: initialize_system()
-# Creates required directory structure if not already present
-# ─────────────────────────────────────────────────────────────
+
 initialize_system() {
     echo "============================================"
     echo "  KNH System Initialization"
