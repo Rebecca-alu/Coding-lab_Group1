@@ -61,3 +61,19 @@ secure_data() {
     echo "  drwx------ on directory = only owner can read/write/enter"
     echo "  -rw------- on files    = only owner can read and write"
 }
+
+echo "Welcome to KNH admin system"
+echo ""
+echo "What do you want to do: "
+echo""
+echo "1) Initiliaze the system"
+echo "2) Secure the hospital data"
+read option
+
+if (( option == 1 )); then
+    initialize_system
+elif (( option == 2 )); then
+    secure_data
+else
+    echo "Wrong inpurt. Allowed to use only 1 and 2"
+fi
