@@ -2,7 +2,7 @@
 
 process_vitals() {
 
-   	echo "Analyzing critical vitals....."
+   	echo "Analyzing critical vitals........"
     	> reports/critical_alerts.txt
 
 	for file in heart_rate_log temperature_log; do
@@ -12,14 +12,14 @@ process_vitals() {
     		>> reports/critical_alerts.txt
 	done
 
-    echo "Report created for CRITICAL Vitals"
+    echo "Report created for CRITICAL Vitals."
 }
 
 water_audit() {
     log_file="active_logs/water_usage_log.log"
 
     if [ ! -f active_logs ]; then
-        echo "The logs directory is missing"
+        echo "The logs directory is missing."
         return 1
     fi
 
