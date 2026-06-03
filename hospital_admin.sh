@@ -1,5 +1,5 @@
 #!/bin/bash
- 
+
 initialize_system() {
     echo "============================================"
     echo "  KNH System Initialization"
@@ -40,16 +40,19 @@ initialize_system() {
     echo "  [OK] Log files initialized in active_logs/."
 }
 
-# Step 1: Initialize the directory structure
-initialize_system
 
-# Step 2: Lock down permissions
-secure_data
-
-# Final status message with current date
+echo "Welcome to KNH admin system"
 echo ""
-echo "============================================"
-echo "  System Environment Secured"
-echo "  Date: $(date)"
-echo "============================================"
+echo "What do you want to do: "
+echo""
+echo "1) Initiliaze the system"
+echo "2) Secure the hospital data"
+read option
 
+if (( option == 1 )); then
+    initialize_system
+elif (( option == 2 )); then
+    secure_data
+else
+    echo "Wrong inpurt. Allowed to use only 1 and 2"
+fi
