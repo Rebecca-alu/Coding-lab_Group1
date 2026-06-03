@@ -1,19 +1,11 @@
 #!/bin/bash
- # hospital_admin.sh
-# KNH Digital Infrastructure - Environment Setup & Security
-# Members: 1 (Architect), 2 (Security Lead), 3 (Orchestrator)
- 
-# ─────────────────────────────────────────────────────────────
 
-# MEMBER 1 - The Architect: initialize_system()
-# Creates required directory structure if not already present
-# ─────────────────────────────────────────────────────────────
 initialize_system() {
     echo "============================================"
     echo "  KNH System Initialization"
     echo "============================================"
  
-    # Check and create active_logs directory
+   
     if [ ! -d "active_logs" ]; then
         echo "Creating active_logs directory..."
         mkdir -p active_logs
@@ -22,7 +14,7 @@ initialize_system() {
         echo "  [EXISTS] active_logs already exists. Skipping."
     fi
  
-    # Check and create archived_logs directory
+    
     if [ ! -d "archived_logs" ]; then
         echo "Creating archived_logs directory..."
         mkdir -p archived_logs
