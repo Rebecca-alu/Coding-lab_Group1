@@ -1,10 +1,12 @@
 #!/bin/bash
 
+#Member 1
+
 initialize_system() {
     echo "============================================"
     echo "  KNH System Initialization"
     echo "============================================"
- 
+    echo ""
    
     if [ ! -d "active_logs" ]; then
         echo "Creating active_logs directory..."
@@ -37,7 +39,7 @@ initialize_system() {
     echo "  [OK] project initialized successfully..."
 }
 
-
+#Member 2
 
 secure_data() {
     echo ""
@@ -59,7 +61,9 @@ secure_data() {
     echo "  -rw------- on files    = only owner can read and write"
 }
 
+echo "============================"
 echo "Welcome to KNH admin system"
+echo "==========================="
 echo ""
 echo "What do you want to do: "
 echo""
