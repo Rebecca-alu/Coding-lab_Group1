@@ -66,7 +66,7 @@ echo "Welcome to KNH admin system"
 echo "==========================="
 echo ""
 echo "What do you want to do: "
-echo""
+echo ""
 echo "1) Initiliaze the system"
 echo "2) Secure the hospital data"
 read option
