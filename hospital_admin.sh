@@ -72,5 +72,5 @@ if (( option == 1 )); then
 elif (( option == 2 )); then
     secure_data
 else
-    echo "Wrong inpurt. Allowed to use only 1 and 2"
+    echo "Wrong input. Allowed to use only 1 and 2."
 fi
